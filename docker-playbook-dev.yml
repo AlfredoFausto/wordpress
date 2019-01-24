@@ -4,3 +4,4 @@
   tasks:
   - name: execute docker compose
     command: docker ps
+    become: true
