@@ -4,6 +4,3 @@
   tasks:
   - name: execute docker compose
     command: docker ps
-    become: yes
-    become_method: sudo
-    become_user: ec2-user
