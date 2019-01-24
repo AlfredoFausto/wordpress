@@ -2,5 +2,13 @@
 - hosts: tag_Name_app_dev1
 
   tasks:
-  - name: execute docker compose
-    command: docker ps
+  - name: copy Dockerfile
+    copy:
+      src: /var/lib/jenkins/workspace/app_dev_deploy1/
+      dest: /tmp/
+      owner: ec2-user
+      group: ec2-user
+      mode: 0644
+
+  - name: Build image
+    command: docker build --tag="wordpress:Dockerfile" /tmp/.
