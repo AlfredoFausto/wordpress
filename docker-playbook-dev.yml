@@ -5,4 +5,4 @@
   - name: execute docker compose
     command: docker ps
     become: yes
-    become_method: su
+    become_method: sudo
