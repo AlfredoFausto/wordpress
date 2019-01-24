@@ -1,0 +1,6 @@
+---
+- hosts: tag_Name_app_dev1
+
+  tasks:
+  - name: execute docker compose
+    command: docker ps
